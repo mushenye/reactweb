@@ -3,42 +3,25 @@ import './App.css';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import Home from "./components/Home";
+import Resume from "./components/Resume";
+import Footer from './components/Footer';
 
-const data={name:"Simani", age:32}
 
-
-
-function Header(props){
-  return (
-    <h1>{props.name}</h1>
-  )
-}
-
+import { Route,Routes } from 'react-router-dom';
+import About from './components/About';
+import Feedback from './components/Feedback';
 
 
 
-function Counter(){
-const [count, setCount]=useState(0)
-
-const increment=()=>{
- setCount(previousCount => previousCount +1)
-  };
-
-const decrement = () => {
-  setCount(previousCount=>previousCount-1);
-};
 
 
-  return (
-   <h1>
-    <button onClick={increment}> +</button>
-   {count}
-     <button onClick={decrement}> - </button>
-  
-    </h1>
-  )
 
-}
+
+
+
+
 
 
 
@@ -46,12 +29,19 @@ const decrement = () => {
 function App() {
   return (
     <>
-    <Navbar/>,
-    <Contact/>,
-    <Counter/>
-    
+      <Navbar />,
+      <div className="row">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contacts" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/feedback" element={<Feedback />} />
+        </Routes>
+      </div>
+      <Footer />
     </>
-    
   );
 }
 

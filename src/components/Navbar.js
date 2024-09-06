@@ -1,13 +1,19 @@
-
-import React from 'react'
+import { Link } from "react-router-dom";
+import React from "react";
+import logo from "./assets/logo.png";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <nav className="navbar navbar-expand-lg navbar-light bg-success py-3">
       <div className="container px-5">
-        <a className="navbar-brand" href="index.html">
-          <span className="fw-bolder text-primary">Simani Communication Technologies</span>
-        </a>
+        <Link to="/" className="navbar-brand">
+          <img
+            height={50}
+            src={logo}
+            alt="Company Logo"
+            className="fw-bolder text-primary"
+          />
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,31 +28,40 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
             <li className="nav-item">
-              <a className="nav-link" href="index.html">
+              <Link to="/" className="nav-link">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="resume.html">
+              <Link to="/resume" className="nav-link">
                 Resume
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="projects.html">
+              <Link to="/projects" className="nav-link">
                 Projects
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="contact.html">
+              <Link to="/contacts" className="nav-link">
                 Contact
-              </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link">
+                About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/feedback" className="nav-link">
+                Feedback
+              </Link>
             </li>
           </ul>
         </div>
       </div>
-      <hr></hr>
     </nav>
   );
 }
 
-export default Navbar
+export default Navbar;
