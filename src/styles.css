@@ -221,6 +221,7 @@ strong {
 
 small, .small {
   font-size: 0.875em;
+  
 }
 
 mark, .mark {
@@ -245,11 +246,11 @@ sup {
 }
 
 a {
-  color: var(--bs-link-color);
-  text-decoration: underline;
+  color:white;
+  text-decoration: none;
 }
 a:hover {
-  color: var(--bs-link-hover-color);
+  color: var(--bs-warning);
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -598,7 +599,7 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 20%;
   height: auto;
 }
 
@@ -3623,7 +3624,7 @@ textarea.form-control-lg {
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
-  color: var(--bs-nav-link-color);
+  color: var(--bs-highlight-bg);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -3704,6 +3705,7 @@ textarea.form-control-lg {
 .nav-fill .nav-item {
   flex: 1 1 auto;
   text-align: center;
+  color: white;
 }
 
 .nav-justified > .nav-link,
@@ -11555,12 +11557,12 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: #1e30f3;
-  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+  background:  #008000;
+  background: linear-gradient(135deg,  #008000 0%, #0000FF 100%);
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  background: -webkit-linear-gradient(315deg, #0000FF 0%, #008000 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
